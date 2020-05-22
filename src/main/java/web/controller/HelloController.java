@@ -24,12 +24,5 @@ public class HelloController {
 		model.addAttribute("messages", messages);
 		return "hello";
 	}
-
-	@RequestMapping(value = "cars", method = RequestMethod.GET)
-	public String printCars(ModelMap model) {
-		Service serv = new Service();
-		model.addAttribute("listCars", serv.listCars());
-		return "cars";
-	}
 	
 }
